@@ -19,7 +19,7 @@ export default function Footer() {
       {/* Top red line */}
       <div className="h-px bg-[#880808]" aria-hidden="true" />
 
-      <div className="max-w-screen-xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-16 md:py-20">
           {/* Brand */}
