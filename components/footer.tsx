@@ -1,3 +1,5 @@
+'use client'
+
 import { Instagram, Youtube, Twitter, Facebook } from 'lucide-react'
 
 const socials = [
