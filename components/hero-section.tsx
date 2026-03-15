@@ -23,7 +23,7 @@ export default function HeroSection() {
         >
           <iframe
             className="absolute w-[300%] h-[300%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            src="https://www.youtube.com/embed/nVhNCTH8pDs?autoplay=1&mute=1&loop=1&playlist=nVhNCTH8pDs&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+            src="https://www.youtube.com/embed/uKqL5RX2ujA?autoplay=1&mute=1&loop=1&playlist=uKqL5RX2ujA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
             title="Background video"
             allow="autoplay; encrypted-media"
             frameBorder="0"
@@ -54,7 +54,7 @@ export default function HeroSection() {
           className="text-[#880808] text-xs tracking-[0.4em] mb-6"
           style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
         >
-          NEW ALBUM — SANGRE
+          NEW ALBUM — SABOREANDO SALES
         </p>
 
         {/* Band name */}
