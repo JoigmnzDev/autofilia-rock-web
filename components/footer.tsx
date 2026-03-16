@@ -57,14 +57,20 @@ export default function Footer() {
               NAVIGATION
             </h3>
             <ul className="flex flex-col gap-3">
-              {['TOUR', 'MUSIC', 'MERCH', 'PRESS', 'ABOUT'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'TOUR', href: '/#tour' },
+                { label: 'MUSIC', href: '/#music' },
+                { label: 'MERCH', href: '/#merch' },
+                { label: 'PRESS', href: '/#press' },
+                { label: 'ABOUT', href: '/about' },
+              ].map((item) => (
+                <li key={item.label}>
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={item.href}
                     className="text-[#888480] hover:text-[#f0ece4] text-sm tracking-widest transition-colors duration-200"
                     style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
