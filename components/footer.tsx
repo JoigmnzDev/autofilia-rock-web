@@ -61,6 +61,7 @@ export default function Footer() {
                 { label: 'TOUR', href: '/#tour' },
                 { label: 'MUSIC', href: '/#music' },
                 { label: 'MERCH', href: '/#merch' },
+                { label: 'STORE', href: '/store' },
                 { label: 'PRESS', href: '/#press' },
                 { label: 'ABOUT', href: '/about' },
               ].map((item) => (

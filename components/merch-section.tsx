@@ -123,7 +123,7 @@ export default function MerchSection() {
         {/* Shop CTA */}
         <div className="mt-12 text-center">
           <a
-            href="#"
+            href="/store"
             className="inline-flex items-center gap-3 border border-[#2a2a2a] hover:border-[#880808] text-[#888480] hover:text-[#f0ece4] px-10 py-4 text-xs tracking-[0.3em] transition-all duration-300"
             style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
           >
