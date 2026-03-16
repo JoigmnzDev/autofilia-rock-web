@@ -1,14 +1,16 @@
 import { Music2, ExternalLink } from 'lucide-react'
 
+const ALBUM_ID = '0AbFFTfM96AJWToU49venu'
+
 const tracks = [
-  { title: 'UN LUGAR SEGURO', duration: '3:52', year: '2025' },
-  { title: 'EL TIEMPO PASA', duration: '4:15', year: '2025' },
-  { title: 'EL GUERRERO SIN ARMAS', duration: '4:08', year: '2025' },
-  { title: 'ME CANSÉ', duration: '3:41', year: '2025' },
-  { title: 'SER LIBRE', duration: '4:22', year: '2025' },
-  { title: 'TODO CONTIGO', duration: '3:58', year: '2025' },
-  { title: 'MIS MIEDOS', duration: '4:05', year: '2025' },
-  { title: 'LIBERTADES QUE QUEDAN', duration: '4:34', year: '2025' },
+  { title: 'UN LUGAR SEGURO', duration: '3:52', year: '2025', trackNum: 1 },
+  { title: 'EL TIEMPO PASA', duration: '4:15', year: '2025', trackNum: 2 },
+  { title: 'EL GUERRERO SIN ARMAS', duration: '4:08', year: '2025', trackNum: 3 },
+  { title: 'ME CANSÉ', duration: '3:41', year: '2025', trackNum: 4 },
+  { title: 'SER LIBRE', duration: '4:22', year: '2025', trackNum: 5 },
+  { title: 'TODO CONTIGO', duration: '3:58', year: '2025', trackNum: 6 },
+  { title: 'MIS MIEDOS', duration: '4:05', year: '2025', trackNum: 7 },
+  { title: 'LIBERTADES QUE QUEDAN', duration: '4:34', year: '2025', trackNum: 8 },
 ]
 
 export default function MusicSection() {
@@ -105,29 +107,34 @@ export default function MusicSection() {
             </p>
             <ul className="divide-y divide-[#2a2a2a]" role="list">
               {tracks.map((track, i) => (
-                <li
-                  key={i}
-                  className="group flex items-center gap-5 py-5 hover:bg-[#050505] -mx-4 px-4 transition-colors duration-200 cursor-pointer"
-                >
-                  <span
-                    className="text-[#2a2a2a] group-hover:text-[#880808] text-xs w-5 text-right tabular-nums transition-colors duration-200"
-                    aria-hidden="true"
+                <li key={i}>
+                  <a
+                    href={`https://open.spotify.com/album/${ALBUM_ID}?highlight=spotify:track:${track.trackNum}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-5 py-5 hover:bg-[#050505] -mx-4 px-4 transition-colors duration-200 cursor-pointer"
                   >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <Music2 size={14} className="text-[#880808] flex-shrink-0" aria-hidden="true" />
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className="text-lg md:text-2xl font-bold text-[#f0ece4] group-hover:text-[#880808] transition-colors duration-300 truncate"
-                      style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
+                    <span
+                      className="text-[#2a2a2a] group-hover:text-[#880808] text-xs w-5 text-right tabular-nums transition-colors duration-200"
+                      aria-hidden="true"
                     >
-                      {track.title}
-                    </p>
-                  </div>
-                  <div className="text-right flex-shrink-0">
-                    <span className="text-[#888480] text-xs tabular-nums">{track.duration}</span>
-                    <span className="block text-[#2a2a2a] text-[10px]">{track.year}</span>
-                  </div>
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <Music2 size={14} className="text-[#880808] flex-shrink-0" aria-hidden="true" />
+                    <div className="flex-1 min-w-0">
+                      <p
+                        className="text-lg md:text-2xl font-bold text-[#f0ece4] group-hover:text-[#880808] transition-colors duration-300 truncate"
+                        style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
+                      >
+                        {track.title}
+                      </p>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-[#888480] text-xs tabular-nums">{track.duration}</span>
+                      <span className="block text-[#2a2a2a] text-[10px]">{track.year}</span>
+                    </div>
+                    <ExternalLink size={12} className="text-[#2a2a2a] group-hover:text-[#880808] transition-colors duration-200 flex-shrink-0" />
+                  </a>
                 </li>
               ))}
             </ul>
