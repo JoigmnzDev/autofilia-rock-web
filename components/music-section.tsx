@@ -49,16 +49,16 @@ export default function MusicSection() {
               className="text-[#880808] text-xs tracking-[0.35em]"
               style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
             >
-              LATEST ALBUM
+              NEW ALBUM
             </p>
             <h3
               className="text-3xl md:text-5xl font-bold text-[#f0ece4]"
               style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
             >
-              SANGRE
+              SABOREANDO SALES
             </h3>
             <p className="text-[#888480] text-sm leading-relaxed max-w-sm">
-              The debut album. Eleven tracks of pure, distorted catharsis. Recorded live in Madrid, 2025.
+              Pure rock, blood and fire. Distilled essence of Autofilia's sonic universe in thirteen devastating tracks.
             </p>
 
             {/* Spotify embed placeholder */}
@@ -68,8 +68,8 @@ export default function MusicSection() {
             >
               {/* Replace this iframe src with your actual Spotify album/track URI */}
               <iframe
-                title="Autofilia on Spotify"
-                src="https://open.spotify.com/embed/artist/6eUKZXaKkcviH0Ku9w2n3V?utm_source=generator&theme=0"
+                title="Autofilia - Saboreando Sales on Spotify"
+                src="https://open.spotify.com/embed/album/0AbFFTfM96AJWToU49venu?utm_source=generator&theme=0"
                 width="100%"
                 height="352"
                 frameBorder="0"
