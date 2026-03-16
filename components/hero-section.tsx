@@ -12,22 +12,23 @@ export default function HeroSection() {
       className="relative h-screen w-full overflow-hidden flex items-center justify-center"
       aria-label="Hero"
     >
-      {/* Muted video placeholder — replace src with actual video file */}
+      {/* YouTube background video — muted autoplay loop via iframe API */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[#050505]" />
-        {/* Video element — muted, autoplay, loop */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/placeholder-poster.jpg"
+        {/* YouTube iframe — scaled up to cover, pointer-events none so it never interrupts UX */}
+        <div
+          className="absolute inset-0 opacity-30"
           aria-hidden="true"
+          style={{ pointerEvents: 'none' }}
         >
-          {/* Replace with actual video source */}
-          {/* <source src="/videos/autofilia-bg.mp4" type="video/mp4" /> */}
-        </video>
+          <iframe
+            className="absolute w-[300%] h-[300%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            src="https://www.youtube.com/embed/uKqL5RX2ujA?autoplay=1&mute=1&loop=1&playlist=uKqL5RX2ujA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+            title="Background video"
+            allow="autoplay; encrypted-media"
+            frameBorder="0"
+          />
+        </div>
 
         {/* Cinematic vignette + noise overlay */}
         <div
@@ -53,7 +54,7 @@ export default function HeroSection() {
           className="text-[#880808] text-xs tracking-[0.4em] mb-6"
           style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
         >
-          NEW ALBUM — SANGRE
+          NEW ALBUM — SABOREANDO SALES
         </p>
 
         {/* Band name */}
