@@ -3,14 +3,14 @@ import { Music2, ExternalLink } from 'lucide-react'
 const ALBUM_ID = '0AbFFTfM96AJWToU49venu'
 
 const tracks = [
-  { title: 'UN LUGAR SEGURO', duration: '3:52', year: '2025', trackNum: 1 },
-  { title: 'EL TIEMPO PASA', duration: '4:15', year: '2025', trackNum: 2 },
-  { title: 'EL GUERRERO SIN ARMAS', duration: '4:08', year: '2025', trackNum: 3 },
-  { title: 'ME CANSÉ', duration: '3:41', year: '2025', trackNum: 4 },
-  { title: 'SER LIBRE', duration: '4:22', year: '2025', trackNum: 5 },
-  { title: 'TODO CONTIGO', duration: '3:58', year: '2025', trackNum: 6 },
-  { title: 'MIS MIEDOS', duration: '4:05', year: '2025', trackNum: 7 },
-  { title: 'LIBERTADES QUE QUEDAN', duration: '4:34', year: '2025', trackNum: 8 },
+  { title: 'UN LUGAR SEGURO', duration: '3:20', year: '2025', trackNum: 1 },
+  { title: 'EL TIEMPO PASA', duration: '2:51', year: '2025', trackNum: 2 },
+  { title: 'EL GUERRERO SIN ARMAS', duration: '3:27', year: '2025', trackNum: 3 },
+  { title: 'ME CANSÉ', duration: '2:47', year: '2025', trackNum: 4 },
+  { title: 'SER LIBRE', duration: '2:45', year: '2025', trackNum: 5 },
+  { title: 'TODO CONTIGO', duration: '3:47', year: '2025', trackNum: 6 },
+  { title: 'MIS MIEDOS', duration: '2:29', year: '2025', trackNum: 7 },
+  { title: 'LIBERTADES QUE QUEDAN', duration: '3:20', year: '2025', trackNum: 8 },
 ]
 
 export default function MusicSection() {
