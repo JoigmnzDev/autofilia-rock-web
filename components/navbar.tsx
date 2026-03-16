@@ -22,9 +22,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-[#050505]/95 backdrop-blur-sm border-b border-[#2a2a2a]' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#050505]/95 backdrop-blur-sm border-b border-[#2a2a2a]' : 'bg-transparent'
+        }`}
     >
       <nav
         className="max-w-screen-xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20"
@@ -32,7 +31,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a
-          href="#hero"
+          href="/"
           className="text-[#f0ece4] text-xl md:text-2xl tracking-[0.2em] font-bold"
           style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
           aria-label="Autofilia home"
