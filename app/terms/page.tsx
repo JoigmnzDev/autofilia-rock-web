@@ -1,28 +1,36 @@
 'use client'
 
 import { ChevronUp } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 
 export default function TermsPage() {
   const [showScrollTop, setShowScrollTop] = useState(false)
 
-  const handleScroll = () => {
-    setShowScrollTop(window.scrollY > 300)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
-    <main
-      className="min-h-screen bg-[#050505]"
-      style={{
-        backgroundImage:
-          'radial-gradient(circle at 20% 50%, rgba(136, 8, 8, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(136, 8, 8, 0.02) 0%, transparent 50%)',
-      }}
-      onScroll={handleScroll}
-    >
+    <>
+      <Navbar />
+      <main
+        className="min-h-screen bg-[#050505]"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle at 20% 50%, rgba(136, 8, 8, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(136, 8, 8, 0.02) 0%, transparent 50%)',
+        }}
+      >
       {/* Header Hero */}
       <section className="relative pt-32 pb-20 px-4 md:px-8 border-b border-[#2a2a2a]">
         <div className="max-w-4xl mx-auto">
@@ -245,6 +253,8 @@ export default function TermsPage() {
           <ChevronUp size={24} />
         </button>
       )}
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }

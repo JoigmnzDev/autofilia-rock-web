@@ -1,4 +1,4 @@
-import { MapPin, ExternalLink } from 'lucide-react'
+import { MapPin, Calendar } from 'lucide-react'
 
 const tourDates = [
   {
@@ -8,7 +8,6 @@ const tourDates = [
     city: 'MADRID',
     venue: 'Palacio Vistalegre',
     country: 'ES',
-    sold: false,
   },
   {
     date: '11',
@@ -17,7 +16,6 @@ const tourDates = [
     city: 'BARCELONA',
     venue: 'Razzmatazz',
     country: 'ES',
-    sold: false,
   },
   {
     date: '19',
@@ -26,7 +24,6 @@ const tourDates = [
     city: 'BUENOS AIRES',
     venue: 'Teatro Coliseo',
     country: 'AR',
-    sold: true,
   },
   {
     date: '26',
@@ -35,7 +32,6 @@ const tourDates = [
     city: 'CIUDAD DE MÉXICO',
     venue: 'Foro Sol',
     country: 'MX',
-    sold: false,
   },
   {
     date: '03',
@@ -44,7 +40,6 @@ const tourDates = [
     city: 'BOGOTÁ',
     venue: 'El Campín',
     country: 'CO',
-    sold: false,
   },
   {
     date: '14',
@@ -53,7 +48,6 @@ const tourDates = [
     city: 'LONDON',
     venue: 'O2 Brixton Academy',
     country: 'UK',
-    sold: false,
   },
 ]
 
@@ -129,26 +123,15 @@ export default function TourSection() {
                 </p>
               </div>
 
-              {/* CTA */}
+              {/* Status indicator */}
               <div className="flex-shrink-0">
-                {show.sold ? (
-                  <span
-                    className="text-[10px] tracking-[0.2em] text-[#888480] border border-[#2a2a2a] px-3 py-2"
-                    style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
-                  >
-                    SOLD OUT
-                  </span>
-                ) : (
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.2em] border border-[#880808] text-[#880808] group-hover:bg-[#880808] group-hover:text-[#f0ece4] px-3 md:px-5 py-2 transition-all duration-300"
-                    style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
-                    aria-label={`Buy tickets for ${show.city}`}
-                  >
-                    <span className="hidden sm:inline">TICKETS</span>
-                    <ExternalLink size={10} />
-                  </a>
-                )}
+                <span
+                  className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.2em] text-[#888480] border border-[#2a2a2a] px-3 md:px-5 py-2"
+                  style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
+                >
+                  <Calendar size={10} />
+                  <span className="hidden sm:inline">PRÓXIMAMENTE</span>
+                </span>
               </div>
             </li>
           ))}
@@ -156,7 +139,7 @@ export default function TourSection() {
 
         {/* Footer note */}
         <p className="mt-10 text-[#888480] text-xs tracking-widest text-center">
-          ALL DATES SUBJECT TO CHANGE · FOLLOW US FOR UPDATES
+          FECHAS SUJETAS A CAMBIOS · SÍGUENOS PARA ACTUALIZACIONES
         </p>
       </div>
     </section>
