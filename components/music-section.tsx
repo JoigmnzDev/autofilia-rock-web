@@ -1,10 +1,14 @@
 import { Music2, ExternalLink } from 'lucide-react'
 
 const tracks = [
-  { title: 'SANGRE', duration: '4:12', year: '2026' },
-  { title: 'MOTOR', duration: '3:48', year: '2026' },
-  { title: 'QUEMALO', duration: '5:01', year: '2025' },
-  { title: 'NADA MÁS', duration: '3:33', year: '2025' },
+  { title: 'UN LUGAR SEGURO', duration: '3:52', year: '2025' },
+  { title: 'EL TIEMPO PASA', duration: '4:15', year: '2025' },
+  { title: 'EL GUERRERO SIN ARMAS', duration: '4:08', year: '2025' },
+  { title: 'ME CANSÉ', duration: '3:41', year: '2025' },
+  { title: 'SER LIBRE', duration: '4:22', year: '2025' },
+  { title: 'TODO CONTIGO', duration: '3:58', year: '2025' },
+  { title: 'MIS MIEDOS', duration: '4:05', year: '2025' },
+  { title: 'LIBERTADES QUE QUEDAN', duration: '4:34', year: '2025' },
 ]
 
 export default function MusicSection() {
@@ -58,7 +62,7 @@ export default function MusicSection() {
               SABOREANDO SALES
             </h3>
             <p className="text-[#888480] text-sm leading-relaxed max-w-sm">
-              Pure rock, blood and fire. Distilled essence of Autofilia's sonic universe in thirteen devastating tracks.
+              Pure rock, blood and fire. Distilled essence of Autofilia's sonic universe in eight devastating tracks.
             </p>
 
             {/* Spotify embed placeholder */}
