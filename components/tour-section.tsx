@@ -139,7 +139,7 @@ export default function TourSection() {
 
         {/* Footer note */}
         <p className="mt-10 text-[#888480] text-xs tracking-widest text-center">
-          FECHAS SUJETAS A CAMBIOS · SÍGUENOS PARA ACTUALIZACIONES · TICKETS PRÓXIMAMENTE
+          FECHAS SUJETAS A CAMBIOS · SÍGUENOS PARA ACTUALIZACIONES
         </p>
       </div>
     </section>
