@@ -1,10 +1,16 @@
 import { Music2, ExternalLink } from 'lucide-react'
 
+const ALBUM_ID = '0AbFFTfM96AJWToU49venu'
+
 const tracks = [
-  { title: 'SANGRE', duration: '4:12', year: '2026' },
-  { title: 'MOTOR', duration: '3:48', year: '2026' },
-  { title: 'QUEMALO', duration: '5:01', year: '2025' },
-  { title: 'NADA MÁS', duration: '3:33', year: '2025' },
+  { title: 'UN LUGAR SEGURO', duration: '3:20', year: '2025', trackNum: 1 },
+  { title: 'EL TIEMPO PASA', duration: '2:51', year: '2025', trackNum: 2 },
+  { title: 'EL GUERRERO SIN ARMAS', duration: '3:27', year: '2025', trackNum: 3 },
+  { title: 'ME CANSÉ', duration: '2:47', year: '2025', trackNum: 4 },
+  { title: 'SER LIBRE', duration: '2:45', year: '2025', trackNum: 5 },
+  { title: 'TODO CONTIGO', duration: '3:47', year: '2025', trackNum: 6 },
+  { title: 'MIS MIEDOS', duration: '2:29', year: '2025', trackNum: 7 },
+  { title: 'LIBERTADES QUE QUEDAN', duration: '3:20', year: '2025', trackNum: 8 },
 ]
 
 export default function MusicSection() {
@@ -49,16 +55,16 @@ export default function MusicSection() {
               className="text-[#880808] text-xs tracking-[0.35em]"
               style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
             >
-              LATEST ALBUM
+              NEW ALBUM
             </p>
             <h3
               className="text-3xl md:text-5xl font-bold text-[#f0ece4]"
               style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
             >
-              SANGRE
+              SABOREANDO SALES
             </h3>
             <p className="text-[#888480] text-sm leading-relaxed max-w-sm">
-              The debut album. Eleven tracks of pure, distorted catharsis. Recorded live in Madrid, 2025.
+              La cura está en el agua salada: llorar, transpirar o nadar en el mar. Ocho canciones hechas con el corazón.
             </p>
 
             {/* Spotify embed placeholder */}
@@ -68,8 +74,8 @@ export default function MusicSection() {
             >
               {/* Replace this iframe src with your actual Spotify album/track URI */}
               <iframe
-                title="Autofilia on Spotify"
-                src="https://open.spotify.com/embed/artist/6eUKZXaKkcviH0Ku9w2n3V?utm_source=generator&theme=0"
+                title="Autofilia - Saboreando Sales on Spotify"
+                src="https://open.spotify.com/embed/album/0AbFFTfM96AJWToU49venu?utm_source=generator&theme=0"
                 width="100%"
                 height="352"
                 frameBorder="0"
@@ -101,29 +107,34 @@ export default function MusicSection() {
             </p>
             <ul className="divide-y divide-[#2a2a2a]" role="list">
               {tracks.map((track, i) => (
-                <li
-                  key={i}
-                  className="group flex items-center gap-5 py-5 hover:bg-[#050505] -mx-4 px-4 transition-colors duration-200 cursor-pointer"
-                >
-                  <span
-                    className="text-[#2a2a2a] group-hover:text-[#880808] text-xs w-5 text-right tabular-nums transition-colors duration-200"
-                    aria-hidden="true"
+                <li key={i}>
+                  <a
+                    href={`https://open.spotify.com/album/${ALBUM_ID}?highlight=spotify:track:${track.trackNum}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-5 py-5 hover:bg-[#050505] -mx-4 px-4 transition-colors duration-200 cursor-pointer"
                   >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <Music2 size={14} className="text-[#880808] flex-shrink-0" aria-hidden="true" />
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className="text-lg md:text-2xl font-bold text-[#f0ece4] group-hover:text-[#880808] transition-colors duration-300 truncate"
-                      style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
+                    <span
+                      className="text-[#2a2a2a] group-hover:text-[#880808] text-xs w-5 text-right tabular-nums transition-colors duration-200"
+                      aria-hidden="true"
                     >
-                      {track.title}
-                    </p>
-                  </div>
-                  <div className="text-right flex-shrink-0">
-                    <span className="text-[#888480] text-xs tabular-nums">{track.duration}</span>
-                    <span className="block text-[#2a2a2a] text-[10px]">{track.year}</span>
-                  </div>
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <Music2 size={14} className="text-[#880808] flex-shrink-0" aria-hidden="true" />
+                    <div className="flex-1 min-w-0">
+                      <p
+                        className="text-lg md:text-2xl font-bold text-[#f0ece4] group-hover:text-[#880808] transition-colors duration-300 truncate"
+                        style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
+                      >
+                        {track.title}
+                      </p>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-[#888480] text-xs tabular-nums">{track.duration}</span>
+                      <span className="block text-[#2a2a2a] text-[10px]">{track.year}</span>
+                    </div>
+                    <ExternalLink size={12} className="text-[#2a2a2a] group-hover:text-[#880808] transition-colors duration-200 flex-shrink-0" />
+                  </a>
                 </li>
               ))}
             </ul>

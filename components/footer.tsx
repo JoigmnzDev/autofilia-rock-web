@@ -110,14 +110,18 @@ export default function Footer() {
             © 2026 AUTOFILIA. ALL RIGHTS RESERVED.
           </p>
           <div className="flex items-center gap-6">
-            {['PRIVACY', 'TERMS', 'COOKIES'].map((link) => (
+            {[
+              { label: 'PRIVACY', href: '/privacy' },
+              { label: 'TERMS', href: '#' },
+              { label: 'COOKIES', href: '#' },
+            ].map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="text-[#888480] hover:text-[#f0ece4] text-[11px] tracking-wider transition-colors duration-200"
                 style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>
