@@ -54,14 +54,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <a
-          href="#tour"
-          className="hidden md:inline-flex items-center border border-[#880808] text-[#880808] hover:bg-[#880808] hover:text-[#f0ece4] text-xs tracking-[0.2em] px-5 py-2.5 transition-all duration-300"
-          style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
-        >
-          GET TICKETS
-        </a>
+
 
         {/* Mobile toggle */}
         <button
