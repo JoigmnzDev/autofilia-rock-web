@@ -64,7 +64,7 @@ export default function MusicSection() {
               SABOREANDO SALES
             </h3>
             <p className="text-[#888480] text-sm leading-relaxed max-w-sm">
-              Pure rock, blood and fire. Distilled essence of Autofilia's sonic universe in eight devastating tracks.
+              La cura está en el agua salada: llorar, transpirar o nadar en el mar. Ocho canciones hechas con el corazón.
             </p>
 
             {/* Spotify embed placeholder */}
