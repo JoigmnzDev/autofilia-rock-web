@@ -3,11 +3,11 @@
 import Welcome from "@/emails/welcome";
 import { Resend } from "resend";
 import { prisma } from "@/lib/prisma";
-import { newsletterSchema } from "@/lib/schemas/subscribe.schema";
+import { newsletterSchema } from "./newsletter-schema";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function subscribeNewsletter(data: unknown) {
+export async function subscribeToNewsletter(data: unknown) {
   const result = newsletterSchema.safeParse(data);
 
   if (!result.success) {
@@ -17,7 +17,9 @@ export async function subscribeNewsletter(data: unknown) {
   const email = result.data.email.toLowerCase();
 
   try {
-    const subscriber = await prisma.subscriber.create({ data: { email } });
+    const newsletterSubscriber = await prisma.newsletterSubscriber.create({
+      data: { email },
+    });
     resend.emails
       .send({
         from: "Autofilia <info@autofiliarock.com>",

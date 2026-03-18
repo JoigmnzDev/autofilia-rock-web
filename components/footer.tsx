@@ -1,17 +1,7 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import {
-  Instagram,
-  Youtube,
-  Twitter,
-  Facebook,
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-} from "lucide-react";
-import { subscribeToNewsletter } from "@/app/actions/subscribe";
-import NewsletterSection from "./newsletter-section";
+import { Instagram, Youtube, Twitter, Facebook } from "lucide-react";
+import NewsletterSection from "@/components/newsletter/newsletter-section";
 
 const socials = [
   { icon: Instagram, label: "Instagram", href: "#" },
@@ -21,12 +11,6 @@ const socials = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [isPending, startTransition] = useTransition();
-  const [result, setResult] = useState<{
-    success: boolean;
-    message: string;
-  } | null>(null);
   return (
     <footer
       id="contact"
