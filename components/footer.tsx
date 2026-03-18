@@ -67,17 +67,12 @@ export default function Footer() {
                 { label: "CONTACTO", href: "/contact" },
               ].map((item) => (
                 <li key={item.label}>
-                  {/* En Next.js 16, <Link> es el estándar de oro. 
-        Mantiene el estado de la página y hace prefetching automático.
-      */}
                   <Link
                     href={item.href}
                     className="text-[#888480] hover:text-[#f0ece4] text-sm tracking-widest transition-colors duration-200 uppercase"
                     style={{
                       fontFamily: "var(--font-oswald), Impact, sans-serif",
                     }}
-                    // Next.js 16 maneja el scroll a anclas automáticamente,
-                    // pero puedes forzarlo si quieres: scroll={true}
                   >
                     {item.label}
                   </Link>
