@@ -2,6 +2,7 @@
 
 import { Instagram, Youtube, Twitter, Facebook } from "lucide-react";
 import NewsletterSection from "@/components/newsletter/newsletter-section";
+import Link from "next/link";
 
 const socials = [
   { icon: Instagram, label: "Instagram", href: "#" },
@@ -32,8 +33,8 @@ export default function Footer() {
               AUTOFILIA
             </h2>
             <p className="text-[#888480] text-sm leading-relaxed max-w-xs">
-              Rock band from Madrid. Playing loud since 2019. Tour the world,
-              break the noise.
+              Banda de rock nacida en Canarias. Rompiendo el silencio desde
+              2025. Un sonido crudo nacido entre volcanes y el Atlántico.
             </p>
             {/* Socials */}
             <div className="flex items-center gap-4 mt-2">
@@ -56,27 +57,30 @@ export default function Footer() {
               className="text-[#880808] text-xs tracking-[0.3em] mb-6"
               style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
             >
-              NAVIGATION
+              NAVEGACIÓN
             </h3>
             <ul className="flex flex-col gap-3">
               {[
                 { label: "TOUR", href: "/#tour" },
-                { label: "MUSIC", href: "/#music" },
-                { label: "MERCH", href: "/#merch" },
-                { label: "STORE", href: "/store" },
-                { label: "PRESS", href: "/#press" },
-                { label: "ABOUT", href: "/about" },
+                { label: "MÚSICA", href: "/#music" },
+                { label: "SOBRE NOSOTROS", href: "/about" },
+                { label: "CONTACTO", href: "/contact" },
               ].map((item) => (
                 <li key={item.label}>
-                  <a
+                  {/* En Next.js 16, <Link> es el estándar de oro. 
+        Mantiene el estado de la página y hace prefetching automático.
+      */}
+                  <Link
                     href={item.href}
-                    className="text-[#888480] hover:text-[#f0ece4] text-sm tracking-widest transition-colors duration-200"
+                    className="text-[#888480] hover:text-[#f0ece4] text-sm tracking-widest transition-colors duration-200 uppercase"
                     style={{
                       fontFamily: "var(--font-oswald), Impact, sans-serif",
                     }}
+                    // Next.js 16 maneja el scroll a anclas automáticamente,
+                    // pero puedes forzarlo si quieres: scroll={true}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -92,8 +96,8 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             {[
-              { label: "PRIVACY", href: "/privacy" },
-              { label: "TERMS", href: "/terms" },
+              { label: "PRIVACIDAD", href: "/privacy" },
+              { label: "TÉRMINOS", href: "/terms" },
               { label: "COOKIES", href: "#" },
             ].map((link) => (
               <a

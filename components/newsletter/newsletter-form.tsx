@@ -48,7 +48,7 @@ export default function NewsletterForm({
         className="bg-[#880808] text-[#f0ece4] px-5 py-3 text-xs tracking-[0.2em] hover:bg-[#a00a0a] transition-colors duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
       >
-        {isLoading ? <Loader2 className="animate-spin" /> : "SUBSCRIBE"}
+        {isLoading ? <Loader2 className="animate-spin" /> : "SUSCRIBIRME"}
       </button>
     </form>
   );
