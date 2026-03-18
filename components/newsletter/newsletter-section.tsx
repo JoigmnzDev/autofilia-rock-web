@@ -42,10 +42,11 @@ export default function NewsletterSection() {
         className="text-[#880808] text-xs tracking-[0.3em] mb-6 uppercase"
         style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
       >
-        JOIN THE CIRCLE
+        UNIRSE AL CÍRCULO
       </h3>
       <p className="text-[#888480] text-sm mb-5 leading-relaxed">
-        First access to tickets, exclusive drops, raw content.
+        Acceso prioritario a entradas, lanzamientos exclusivos y material
+        inédito. Sin filtros. Solo ruido real.
       </p>
 
       <Form {...form}>
