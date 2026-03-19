@@ -1,91 +1,146 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import Link from "next/link";
+import { HiOutlineEquals, HiXMark } from "react-icons/hi2"; // React Icons (Heroicons 2)
+import { cn } from "@/lib/utils";
+import { SocialLinks } from "@/components/social-links";
+import { useEffect, useState } from "react";
 
-const navLinks = [
-  { label: 'TOUR', href: '/#tour' },
-  { label: 'MUSIC', href: '/#music' },
-  { label: 'MERCH', href: '/#merch' },
-  { label: 'CONTACT', href: '/#contact' },
-]
+const NAV_LINKS = [
+  { label: "TOUR", href: "/#tour" },
+  { label: "MÚSICA", href: "/#music" },
+  { label: "SOBRE NOSOTROS", href: "/#about" },
+  { label: "CONTACTO", href: "/#contact" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#050505]/95 backdrop-blur-sm border-b border-[#2a2a2a]' : 'bg-transparent'
-        }`}
-    >
-      <nav
-        className="max-w-screen-xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20"
-        aria-label="Main navigation"
+    <>
+      <header
+        className={cn(
+          "fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out",
+          isScrolled || isOpen
+            ? "bg-[#050505]/95 backdrop-blur-md border-b border-[#2a2a2a] h-16"
+            : "bg-transparent h-20",
+        )}
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        {/* Logo */}
-        <a
-          href="/"
-          className="text-[#f0ece4] text-xl md:text-2xl tracking-[0.2em] font-bold"
-          style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
-          aria-label="Autofilia home"
+        <nav
+          aria-label="Navegación Principal"
+          className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-full"
         >
-          AUTOFILIA
-        </a>
+          {/* SEO: El logo es un link al inicio */}
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="text-[#f0ece4] text-xl md:text-2xl tracking-[0.3em] font-bold font-oswald uppercase"
+          >
+            AUTOFILIA
+          </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="text-[#888480] hover:text-[#f0ece4] text-xs tracking-[0.25em] transition-colors duration-200"
-                style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-
-
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-[#f0ece4] p-1"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-[#050505]/98 border-t border-[#2a2a2a]">
-          <ul className="flex flex-col px-6 py-6 gap-6">
-            {navLinks.map((link) => (
+          {/* Menú Escritorio */}
+          <ul className="hidden md:flex items-center gap-10">
+            {NAV_LINKS.map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-[#f0ece4] text-2xl tracking-[0.2em]"
-                  style={{ fontFamily: 'var(--font-oswald), Impact, sans-serif' }}
+                  className="text-[#888480] hover:text-[#f0ece4] text-[11px] tracking-[0.3em] font-oswald transition-colors duration-300 uppercase"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
+
+          <button
+            className="md:hidden text-[#f0ece4] p-2 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <HiXMark size={28} /> : <HiOutlineEquals size={28} />}
+          </button>
+        </nav>
+      </header>
+
+      <div
+        className={cn(
+          "fixed inset-0 z-[150] bg-[#050505] md:hidden transition-all duration-500 ease-in-out flex flex-col",
+          isOpen
+            ? "translate-x-0 opacity-100"
+            : "translate-x-full opacity-0 pointer-events-none",
+        )}
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
+      >
+        <div className="flex items-center justify-between px-6 h-20 border-b border-[#2a2a2a]/50">
+          <div className="w-10" />
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="text-[#f0ece4] text-xl font-bold tracking-[0.3em] font-oswald uppercase"
+          >
+            AUTOFILIA
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-[#f0ece4] p-2"
+            aria-label="Cerrar Menú"
+          >
+            <HiXMark size={28} />
+          </button>
         </div>
-      )}
-    </header>
-  )
+
+        <nav
+          aria-label="Navegación Móvil"
+          className="flex-1 overflow-y-auto flex flex-col"
+        >
+          <ul className="flex flex-col py-12 px-8 gap-8">
+            {NAV_LINKS.map((link) => (
+              <li
+                key={link.label}
+                className="border-b border-[#2a2a2a]/30 pb-4"
+              >
+                <Link
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-[#f0ece4] text-3xl font-oswald tracking-[0.2em] uppercase flex items-center justify-between group"
+                >
+                  {link.label}
+                  <span className="text-[#880808] transition-transform group-hover:translate-x-2">
+                    →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-auto p-10 border-t border-[#2a2a2a]/50 bg-[#080808]">
+            <SocialLinks
+              size={24}
+              className="flex justify-center gap-6"
+              iconClassName="text-[#888480] hover:text-[#f0ece4] transition-colors"
+            />
+          </div>
+        </nav>
+      </div>
+    </>
+  );
 }
