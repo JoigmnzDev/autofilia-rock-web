@@ -1,15 +1,8 @@
 "use client";
 
-import { Instagram, Youtube, Twitter, Facebook } from "lucide-react";
 import NewsletterSection from "@/components/newsletter/newsletter-section";
 import Link from "next/link";
-
-const socials = [
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Youtube, label: "YouTube", href: "#" },
-  { icon: Twitter, label: "X / Twitter", href: "#" },
-  { icon: Facebook, label: "Facebook", href: "#" },
-];
+import { SocialLinks } from "./social-links";
 
 export default function Footer() {
   return (
@@ -36,19 +29,10 @@ export default function Footer() {
               Banda de rock nacida en Canarias. Rompiendo el silencio desde
               2025. Un sonido crudo nacido entre volcanes y el Atlántico.
             </p>
-            {/* Socials */}
-            <div className="flex items-center gap-4 mt-2">
-              {socials.map(({ icon: Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="text-[#888480] hover:text-[#880808] transition-colors duration-200"
-                  aria-label={label}
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
+            <SocialLinks
+              className="mt-2"
+              iconClassName="text-[#888480] group-hover:text-[#f0ece4] fill-[#888480] group-hover:fill-[#f0ece4]"
+            />
           </div>
 
           {/* Links */}
