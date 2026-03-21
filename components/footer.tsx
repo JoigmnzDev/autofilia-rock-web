@@ -76,7 +76,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             {[
               { label: "PRIVACIDAD", href: "/privacy" },
-              { label: "TÉRMINOS", href: "/terms" },
+              { label: "AVISO LEGAL", href: "/legal" },
               { label: "COOKIES", href: "#" },
             ].map((link) => (
               <a
