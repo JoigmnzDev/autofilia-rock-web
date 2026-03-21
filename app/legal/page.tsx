@@ -1,9 +1,13 @@
-"use client";
-
-import { ChevronUp } from "lucide-react";
-import { useState, useEffect } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import type { Metadata } from "next";
+import ScrollToTop from "@/components/scroll-to-top";
+
+export const metadata: Metadata = {
+  title: "Aviso Legal — AUTOFILIA",
+  description:
+    "Información legal oficial de Autofilia. Términos de uso, propiedad intelectual de nuestra música y condiciones de acceso a la comunidad del ruido.",
+};
 
 const sections = [
   {
@@ -51,36 +55,19 @@ El uso de esta web implica la aceptación de estas normativas legales por parte 
 ];
 
 export default function TermsPage() {
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <main className="min-h-screen bg-[#050505]">
       <Navbar />
 
-      {/* Hero header */}
       <section
         className="relative pt-40 pb-20 px-6 md:px-10 overflow-hidden"
         aria-label="Terms header"
       >
-        {/* Decorative red line top */}
         <div
           className="absolute top-0 left-0 right-0 h-px bg-[#880808]"
           aria-hidden="true"
         />
 
-        {/* Background noise texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -117,7 +104,6 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Intro */}
       <section className="px-6 md:px-10 pb-16" aria-label="Terms intro">
         <div className="max-w-5xl mx-auto border-t border-[#2a2a2a] pt-12">
           <p className="text-[#888480] text-base leading-relaxed max-w-2xl">
@@ -129,7 +115,6 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Sections */}
       <section className="px-6 md:px-10 pb-24" aria-label="Terms sections">
         <div className="max-w-5xl mx-auto flex flex-col gap-0">
           {sections.map((section) => (
@@ -137,7 +122,6 @@ export default function TermsPage() {
               key={section.number}
               className="group grid grid-cols-1 md:grid-cols-[120px_1fr] gap-6 md:gap-12 border-t border-[#2a2a2a] py-12 hover:border-[#880808] transition-colors duration-300"
             >
-              {/* Number */}
               <div className="flex md:flex-col items-center md:items-start gap-3 md:gap-2">
                 <span
                   className="text-[#880808] text-xs tracking-[0.3em] font-bold"
@@ -153,7 +137,6 @@ export default function TermsPage() {
                 />
               </div>
 
-              {/* Content */}
               <div className="flex flex-col gap-4">
                 <h2
                   className="text-2xl md:text-3xl font-bold text-[#f0ece4] tracking-wide text-balance"
@@ -177,12 +160,10 @@ export default function TermsPage() {
             </article>
           ))}
 
-          {/* Bottom border */}
           <div className="border-t border-[#2a2a2a]" aria-hidden="true" />
         </div>
       </section>
 
-      {/* Contact Section */}
       <section
         className="px-6 md:px-10 py-16 border-t border-[#2a2a2a] bg-[#0a0808]"
         aria-label="Terms contact"
@@ -218,16 +199,7 @@ export default function TermsPage() {
 
       <Footer />
 
-      {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-[#880808] hover:bg-[#b00a0a] text-[#f0ece4] p-3 rounded-full transition-all duration-300 z-50 shadow-2xl"
-          aria-label="Volver arriba"
-        >
-          <ChevronUp size={24} />
-        </button>
-      )}
+      <ScrollToTop />
     </main>
   );
 }
