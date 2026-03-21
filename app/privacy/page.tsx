@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import type { Metadata } from "next";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad — AUTOFILIA",
@@ -65,18 +66,15 @@ export default function PrivacyPage() {
     <main className="min-h-screen bg-[#050505]">
       <Navbar />
 
-      {/* Hero header */}
       <section
         className="relative pt-40 pb-20 px-6 md:px-10 overflow-hidden"
         aria-label="Privacy header"
       >
-        {/* Decorative red line top */}
         <div
           className="absolute top-0 left-0 right-0 h-px bg-[#880808]"
           aria-hidden="true"
         />
 
-        {/* Background noise texture overlay */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -113,7 +111,6 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Intro */}
       <section className="px-6 md:px-10 pb-16" aria-label="Privacy intro">
         <div className="max-w-5xl mx-auto border-t border-[#2a2a2a] pt-12">
           <p className="text-[#888480] text-base leading-relaxed max-w-2xl">
@@ -125,7 +122,6 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Sections */}
       <section className="px-6 md:px-10 pb-24" aria-label="Privacy sections">
         <div className="max-w-5xl mx-auto flex flex-col gap-0">
           {sections.map((section) => (
@@ -133,7 +129,6 @@ export default function PrivacyPage() {
               key={section.number}
               className="group grid grid-cols-1 md:grid-cols-[120px_1fr] gap-6 md:gap-12 border-t border-[#2a2a2a] py-12 hover:border-[#880808] transition-colors duration-300"
             >
-              {/* Number */}
               <div className="flex md:flex-col items-center md:items-start gap-3 md:gap-2">
                 <span
                   className="text-[#880808] text-xs tracking-[0.3em] font-bold"
@@ -149,7 +144,6 @@ export default function PrivacyPage() {
                 />
               </div>
 
-              {/* Content */}
               <div className="flex flex-col gap-4">
                 <h2
                   className="text-2xl md:text-3xl font-bold text-[#f0ece4] tracking-wide text-balance"
@@ -173,12 +167,10 @@ export default function PrivacyPage() {
             </article>
           ))}
 
-          {/* Bottom border */}
           <div className="border-t border-[#2a2a2a]" aria-hidden="true" />
         </div>
       </section>
 
-      {/* CTA contact band */}
       <section
         className="px-6 md:px-10 py-16 border-t border-[#2a2a2a] bg-[#0a0808]"
         aria-label="Privacy contact"
@@ -218,6 +210,7 @@ export default function PrivacyPage() {
       </section>
 
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }
