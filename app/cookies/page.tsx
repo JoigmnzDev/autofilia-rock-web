@@ -13,51 +13,51 @@ const sections = [
   {
     number: "01",
     title: "¿QUÉ SON LAS COOKIES?",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    body: `Las cookies son pequeños archivos de texto que se almacenan en su dispositivo al visitar nuestro sitio web. Estas herramientas son esenciales para el funcionamiento técnico de la plataforma y para entender cómo interactúan los usuarios con nuestro contenido creativo.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+En Autofilia utilizamos estas tecnologías principalmente para mejorar la velocidad de carga del sitio y recordar sus preferencias de navegación sin identificarle personalmente.`,
   },
   {
     number: "02",
     title: "TIPOS DE COOKIES QUE UTILIZAMOS",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+    body: `Nuestra plataforma emplea dos categorías principales: cookies propias, gestionadas directamente por nuestra infraestructura para garantizar la estabilidad del sitio; y cookies de terceros, que permiten la integración de servicios externos como reproductores de audio o métricas de tráfico.
 
-Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae.`,
+Estas tecnologías pueden ser de "sesión" (se eliminan al cerrar el navegador) o "persistentes" (permanecen en su equipo hasta que expiran o son eliminadas manualmente).`,
   },
   {
     number: "03",
     title: "COOKIES TÉCNICAS Y NECESARIAS",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In ut magna vel mauris malesuada dictum. Nulla facilisi. Fusce id mi diam, non ornare orci.
+    body: `Son aquellas estrictamente necesarias para la navegación y el correcto funcionamiento de la web. Sin ellas, no podríamos garantizar la seguridad del sitio ni ofrecer funciones básicas como la navegación entre secciones o el acceso a áreas restringidas.
 
-Sed laoreet mi augue, a tincidunt eros. Donec id ligula a lacus euismod eleifend. Proin in nisi porttitor, fermentum nisi a, euismod purus. Integer imperdiet lacus ac lorem condimentum, quis laoreet neque bibendum.`,
+Estas cookies no requieren su consentimiento, ya que son indispensables para que podamos entregarle el servicio que ha solicitado al entrar en nuestro dominio.`,
   },
   {
     number: "04",
     title: "COOKIES DE ANÁLISIS Y MEDICIÓN",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis molestie dictum semper, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
+    body: `Utilizamos herramientas de análisis agregada que nos ayudan a entender qué secciones de la web generan más interés entre nuestra comunidad. Estos datos son puramente estadísticos: nos dicen cuántas personas nos visitan, pero nunca quiénes son.
 
-Nunc egestas diam feugiat libero posuere convallis. Quisque accumsan posuere purus. Integer elementum tempor libero. Donec lobortis dui id lectus consequat, sit amet vestibulum tortor iaculis. Maecenas non velit nibh.`,
+La información recolectada nos permite optimizar el rendimiento de la plataforma y asegurar que el contenido más relevante para los seguidores esté siempre accesible.`,
   },
   {
     number: "05",
     title: "COOKIES DE TERCEROS",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend libero at lobortis mollis.
+    body: `Al integrar servicios de plataformas como Spotify, YouTube o Instagram para que pueda disfrutar de nuestro ruido, estos terceros pueden instalar sus propias cookies de seguimiento. 
 
-Nunc rhoncus dui vel sem. Sed arcu lectus, auctor vitae, consectetuer et, pretium quis, arcu. Sed aliquet, neque at rutrum mollis, neque nisi iaculis augue, vel rhoncus nisi nunc vitae arcu. Phasellus sit amet tellus sed ligula.`,
+Autofilia no tiene control directo sobre los datos que estas empresas recolectan. Le recomendamos consultar las políticas de cookies de estos proveedores externos para obtener información detallada sobre su tratamiento de datos.`,
   },
   {
     number: "06",
     title: "GESTIÓN Y CONTROL DE COOKIES",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper.
+    body: `Usted tiene el derecho de aceptar, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones de su navegador. Tenga en cuenta que, si decide bloquear las cookies técnicas, la experiencia de navegación podría verse alterada.
 
-Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.`,
+Puede encontrar las instrucciones para gestionar estas preferencias en el menú de "Ayuda" o "Privacidad" de navegadores como Chrome, Firefox, Safari o Edge.`,
   },
   {
     number: "07",
     title: "ACTUALIZACIONES DE ESTA POLÍTICA",
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum. Nullam varius nulla eu augue. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.
+    body: `Podemos modificar esta Política de Cookies en función de nuevas exigencias legislativas o con el fin de adaptar dicho documento a las instrucciones dictadas por la Agencia Española de Protección de Datos.
 
-Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. Nullam in massa sed ante porta tincidunt. Fusce aliquet purus in magna tincidunt, vel vulputate purus condimentum. Maecenas rutrum velit vitae mauris pellentesque.`,
+Le aconsejamos que visite esta sección periódicamente. Cualquier cambio significativo será comunicado a través de la web para asegurar que siempre mantenga el control sobre su privacidad.`,
   },
 ];
 
@@ -114,10 +114,12 @@ export default function CookiesPage() {
       <section className="px-6 md:px-10 pb-16" aria-label="Cookies intro">
         <div className="max-w-5xl mx-auto border-t border-[#2a2a2a] pt-12">
           <p className="text-[#888480] text-base leading-relaxed max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            En Autofilia utilizamos cookies y tecnologías similares para que tu
+            experiencia en nuestra web sea tan fluida como un buen riff. Estas
+            herramientas nos ayudan a entender cómo interactúas con nuestro
+            contenido y a mejorar el rendimiento de la plataforma, garantizando
+            siempre que tu privacidad esté protegida bajo nuestros estándares de
+            seguridad.
           </p>
         </div>
       </section>
