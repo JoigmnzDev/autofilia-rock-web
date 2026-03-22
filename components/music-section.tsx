@@ -20,8 +20,6 @@ export default function MusicSection() {
       className="relative py-24 md:py-36 bg-[#0f0f0f]"
       aria-label="Music"
     >
-      {/* Top border accent */}
-      <div className="h-px bg-[#880808]/40 w-full mb-0" aria-hidden="true" />
 
       <div className="max-w-screen-xl mx-auto px-6 md:px-10">
         {/* Header */}
