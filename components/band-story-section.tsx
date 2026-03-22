@@ -271,34 +271,33 @@ export default function BandStorySection() {
         </p>
 
         {/* Main heading — overlapping outlined + filled */}
-        <div className="relative mb-8 md:mb-12">
-          {/* Capa de contorno (Solo visible y ajustada para Desktop) */}
+        <div className="relative mb-8">
+          {/* Outlined background layer */}
           <h2
-            className="absolute inset-0 select-none pointer-events-none hidden lg:block"
+            className="absolute inset-0 select-none pointer-events-none hidden md:block"
             style={{
               fontFamily: 'var(--font-oswald), Impact, sans-serif',
-              fontSize: 'clamp(2rem, 6vw, 4.5rem)', // Bajamos el máximo en desktop
+              fontSize: 'clamp(2.5rem, 8vw, 6rem)',
               fontWeight: 900,
-              letterSpacing: '-0.02em', // Letras más juntas en desktop para que se vea más pro
+              letterSpacing: '0.04em',
               color: 'transparent',
-              WebkitTextStroke: '1px rgba(136,8,8,0.2)', // Borde rojo muy fino en lugar de negro
-              transform: 'translate(6px, -6px)', // Desplazamiento hacia arriba a la derecha (estilo póster)
+              WebkitTextStroke: '2px rgba(5,5,5,0.15)',
+              transform: 'translate(4px, 4px)',
             }}
             aria-hidden="true"
           >
             EL ALMA DE AUTOFILIA
           </h2>
-
-          {/* Capa sólida principal */}
+          {/* Solid foreground layer */}
           <h2
-            className="relative text-[#050505] font-black leading-[0.85] tracking-tight text-balance uppercase"
+            className="relative text-[#050505] font-black leading-[0.9] tracking-tight text-balance"
             style={{
               fontFamily: 'var(--font-oswald), Impact, sans-serif',
-              fontSize: 'clamp(2.2rem, 7vw, 4.8rem)', // Tamaño más contenido en desktop
+              fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+              letterSpacing: '0.04em',
             }}
           >
-            El alma de <br className="md:hidden" />
-            <span className="text-[#880808]">Autofilia</span>
+            EL ALMA DE AUTOFILIA
           </h2>
         </div>
 
@@ -318,20 +317,37 @@ export default function BandStorySection() {
             className="text-[#1a1a1a] text-sm md:text-base leading-relaxed text-balance"
             style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
           >
-            <span className="font-semibold text-[#050505]">Desde el volcán.</span> Nacidos
-            del ruido atómico y la rabia volcánica de las Islas Canarias, Autofilia construyó
-            su sonido entre paredes de feedback y amplificadores empujados más allá del límite.
+            <span className="font-semibold text-[#050505]">Desde el volcán.</span> Nacidos 
+            del ruido atómico y la rabia volcánica de las Islas Canarias, Autofilia construyó 
+            su sonido entre paredes de feedback y amplificadores empujados más allá del límite. 
             Noise-rock de trinchera, destilado en cada nota al borde del colapso.
+          </p>
+          <p
+            className="text-[#444] text-sm md:text-base leading-relaxed text-balance"
+            style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
+          >
+            Más de una década incendiando recintos: cada disco una cicatriz nueva en el 
+            catálogo del caos, cada concierto un ritual de catarsis colectiva. La música 
+            no se escucha — se siente en el esternón, en el límite donde el volumen se 
+            convierte en verdad.
           </p>
         </div>
 
         {/* Brutalist CTA button */}
         <Link
           href="/about"
-          className="inline-block border-2 border-[#050505] text-[#050505] px-10 py-4 text-[10px] md:text-xs tracking-[0.3em] font-black uppercase transition-all duration-300 hover:bg-[#050505] hover:text-[#f0ece4] active:scale-95"
-          style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+          className="group relative inline-flex items-center border-2 border-[#050505] px-10 md:px-14 py-4 text-[10px] md:text-[11px] tracking-[0.4em] font-bold transition-all duration-300 hover:bg-[#050505] hover:text-[#f0ece4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#880808] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ece4]"
+          style={{
+            fontFamily: 'var(--font-oswald), Impact, sans-serif',
+            color: '#050505',
+          }}
         >
-          Nuestra historia completa
+          <span className="relative z-10">NUESTRA HISTORIA COMPLETA</span>
+          {/* Hover accent slash */}
+          <span
+            className="absolute left-0 top-0 h-full w-0 bg-[#880808] transition-all duration-300 group-hover:w-1"
+            aria-hidden="true"
+          />
         </Link>
       </div>
 
@@ -357,7 +373,24 @@ export default function BandStorySection() {
         </svg>
       </div>
 
+      {/* Scanline effect for lo-fi feel */}
+      <div
+        className="absolute inset-0 z-30 pointer-events-none hidden md:block"
+        style={{
+          background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px)',
+          mixBlendMode: 'multiply',
+        }}
+        aria-hidden="true"
+      />
 
+      {/* Bottom blood-red accent line */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-1 z-30"
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, #880808 20%, #880808 80%, transparent 100%)',
+        }}
+        aria-hidden="true"
+      />
     </section>
   )
 }
