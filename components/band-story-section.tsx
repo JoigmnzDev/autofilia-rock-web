@@ -317,18 +317,18 @@ export default function BandStorySection() {
             className="text-[#1a1a1a] text-sm md:text-base leading-relaxed text-balance"
             style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
           >
-            <span className="font-semibold text-[#050505]">Desde el volcán.</span> Nacidos 
-            del ruido atómico y la rabia volcánica de las Islas Canarias, Autofilia construyó 
-            su sonido entre paredes de feedback y amplificadores empujados más allá del límite. 
+            <span className="font-semibold text-[#050505]">Desde el volcán.</span> Nacidos
+            del ruido atómico y la rabia volcánica de las Islas Canarias, Autofilia construyó
+            su sonido entre paredes de feedback y amplificadores empujados más allá del límite.
             Noise-rock de trinchera, destilado en cada nota al borde del colapso.
           </p>
           <p
             className="text-[#444] text-sm md:text-base leading-relaxed text-balance"
             style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
           >
-            Más de una década incendiando recintos: cada disco una cicatriz nueva en el 
-            catálogo del caos, cada concierto un ritual de catarsis colectiva. La música 
-            no se escucha — se siente en el esternón, en el límite donde el volumen se 
+            Más de una década incendiando recintos: cada disco una cicatriz nueva en el
+            catálogo del caos, cada concierto un ritual de catarsis colectiva. La música
+            no se escucha — se siente en el esternón, en el límite donde el volumen se
             convierte en verdad.
           </p>
         </div>
