@@ -11,9 +11,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#050505]">
       <Navbar />
       <HeroSection />
-      <MusicSection />
-      <TourSection />
       <BandStorySection />
+      <TourSection />
+      <MusicSection />
       <MerchSection />
       <Footer />
     </main>
