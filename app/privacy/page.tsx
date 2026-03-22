@@ -175,38 +175,33 @@ export default function PrivacyPage() {
         className="px-6 md:px-10 py-16 border-t border-[#2a2a2a] bg-[#0a0808]"
         aria-label="Privacy contact"
       >
-        <section
-          className="px-6 md:px-10 py-16 border-t border-[#2a2a2a] bg-[#0a0808]"
-          aria-label="Privacy contact"
-        >
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="flex flex-col gap-2">
-              <p
-                className="text-[#880808] text-xs tracking-[0.3em]"
-                style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
-              >
-                ¿DUDAS?
-              </p>
-              <p
-                className="text-[#f0ece4] text-xl md:text-2xl font-bold"
-                style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
-              >
-                CONTACTA CON NOSOTROS
-              </p>
-              <p className="text-[#888480] text-sm">
-                Escríbenos directamente para cualquier gestión sobre tus datos
-                personales.
-              </p>
-            </div>
-            <a
-              href="mailto:info@autofiliarock.com" // <--- Cambio aquí
-              className="inline-flex items-center border border-[#880808] text-[#880808] hover:bg-[#880808] hover:text-[#f0ece4] text-xs tracking-[0.2em] px-6 py-3 transition-all duration-300 whitespace-nowrap"
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="flex flex-col gap-2">
+            <p
+              className="text-[#880808] text-xs tracking-[0.3em]"
               style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
             >
-              ESCRIBIR A INFO
-            </a>
+              ¿DUDAS?
+            </p>
+            <p
+              className="text-[#f0ece4] text-xl md:text-2xl font-bold"
+              style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
+            >
+              CONTACTA CON NOSOTROS
+            </p>
+            <p className="text-[#888480] text-sm">
+              Escríbenos directamente para cualquier gestión sobre tus datos
+              personales.
+            </p>
           </div>
-        </section>
+          <a
+            href="mailto:info@autofiliarock.com" // <--- Cambio aquí
+            className="inline-flex items-center border border-[#880808] text-[#880808] hover:bg-[#880808] hover:text-[#f0ece4] text-xs tracking-[0.2em] px-6 py-3 transition-all duration-300 whitespace-nowrap"
+            style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
+          >
+            ESCRIBIR A INFO
+          </a>
+        </div>
       </section>
 
       <Footer />
