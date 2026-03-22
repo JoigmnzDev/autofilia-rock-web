@@ -77,16 +77,16 @@ export default function Footer() {
             {[
               { label: "PRIVACIDAD", href: "/privacy" },
               { label: "AVISO LEGAL", href: "/legal" },
-              { label: "COOKIES", href: "#" },
+              { label: "COOKIES", href: "/cookies" },
             ].map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-[#888480] hover:text-[#f0ece4] text-[11px] tracking-wider transition-colors duration-200"
                 style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
