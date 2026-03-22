@@ -15,19 +15,27 @@ import Link from 'next/link'
  *
  * These two non-parallel edges create a thick diagonal slash of white
  * that bleeds off both screen edges and punches hard against the dark collage.
+ *
+ * Mobile: Angles are adjusted to be less aggressive so the button stays visible.
  */
 
-const CLIP_TOP_LEFT   = '22%'   // top-edge start, left side
-const CLIP_TOP_RIGHT  = '2%'    // top-edge end,   right side
-const CLIP_BOT_LEFT   = '83%'   // bottom-edge start, left side
-const CLIP_BOT_RIGHT  = '69%'   // bottom-edge end,   right side
+const CLIP_TOP_LEFT = '22%'   // top-edge start, left side (desktop)
+const CLIP_TOP_RIGHT = '2%'    // top-edge end,   right side (desktop)
+const CLIP_BOT_LEFT = '83%'   // bottom-edge start, left side (desktop)
+const CLIP_BOT_RIGHT = '69%'   // bottom-edge end,   right side (desktop)
+
+// Mobile: More lenient bottom edge to keep button visible
+const CLIP_TOP_LEFT_MOBILE = '28%'
+const CLIP_TOP_RIGHT_MOBILE = '8%'
+const CLIP_BOT_LEFT_MOBILE = '78%'
+const CLIP_BOT_RIGHT_MOBILE = '62%'
 
 export default function BandStorySection() {
   return (
     <section
       id="historia"
       className="relative w-full overflow-hidden"
-      style={{ minHeight: '680px' }}
+      style={{ minHeight: 'clamp(600px, 100vh, 800px)' }}
       aria-label="El Alma de Autofilia — Historia de la banda"
     >
       {/* ── Layer 0: Rock collage photo ── */}
@@ -56,7 +64,7 @@ export default function BandStorySection() {
         The polygon uses viewport-percentage values mapped to the element's
         own bounding box via clip-path. We stretch the element to full width
         and apply the clip so the white band bleeds off both edges exactly
-        like the reference.
+        like the reference. On mobile, we use less aggressive angles.
       */}
       <div
         className="absolute inset-x-0 z-10"
@@ -75,19 +83,38 @@ export default function BandStorySection() {
         aria-hidden="true"
       />
 
+      {/* Mobile-only overlay with adjusted clip-path */}
+      <div
+        className="absolute inset-x-0 z-10 md:hidden"
+        style={{
+          top: 0,
+          bottom: 0,
+          clipPath: `polygon(
+            0% ${CLIP_TOP_LEFT_MOBILE},
+            100% ${CLIP_TOP_RIGHT_MOBILE},
+            100% ${CLIP_BOT_RIGHT_MOBILE},
+            0% ${CLIP_BOT_LEFT_MOBILE}
+          )`,
+          background: '#f0ece4',
+        }}
+        aria-hidden="true"
+      />
+
       {/* ── Layer 2: Content pinned inside the white slash ── */}
       {/*
         We recreate the same clip-path on the content wrapper so that the
         text is visually centred inside the diagonal band. The actual flex
         layout centres it between the two angled edges.
+        
+        Mobile: Uses higher top/bottom padding to keep button visible inside the band.
       */}
       <div
         className="relative z-20 flex flex-col items-center justify-center text-center w-full"
         style={{
-          minHeight: '680px',
-          /* Nudge content vertically so it sits in the middle of the slash */
-          paddingTop: '18%',
-          paddingBottom: '14%',
+          minHeight: 'clamp(600px, 100vh, 800px)',
+          /* Mobile: More padding to keep button in the band */
+          paddingTop: 'clamp(60px, 12%, 120px)',
+          paddingBottom: 'clamp(80px, 20%, 160px)',
         }}
       >
         <div className="flex flex-col items-center gap-5 px-6 max-w-2xl mx-auto">
@@ -160,7 +187,7 @@ export default function BandStorySection() {
           {/* Brutalist outlined CTA */}
           <Link
             href="/about"
-            className="mt-2 inline-block border-2 border-[#050505] px-10 py-3 text-[10px] md:text-[11px] tracking-[0.4em] font-semibold transition-all duration-200 hover:bg-[#050505] hover:text-[#f0ece4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#880808]"
+            className="mt-4 md:mt-2 inline-block border-2 border-[#050505] px-8 md:px-10 py-3 text-[9px] sm:text-[10px] md:text-[11px] tracking-[0.4em] font-semibold transition-all duration-200 hover:bg-[#050505] hover:text-[#f0ece4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#880808] whitespace-nowrap"
             style={{
               fontFamily: 'var(--font-oswald), Impact, sans-serif',
               color: '#050505',
