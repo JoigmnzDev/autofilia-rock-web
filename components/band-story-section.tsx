@@ -187,7 +187,9 @@ export default function BandStorySection() {
         className="absolute inset-x-0 top-0 bottom-0 z-10 hidden md:block"
         style={{
           clipPath: RIFT_CLIP_PATH,
-          background: '#f0ece4',
+          background: 'rgba(240, 236, 228, 0.05)',
+          backdropFilter: 'blur(4px)',
+          WebkitBackdropFilter: 'blur(4px)',
         }}
         aria-hidden="true"
       />
@@ -196,7 +198,9 @@ export default function BandStorySection() {
         className="absolute inset-x-0 top-0 bottom-0 z-10 md:hidden"
         style={{
           clipPath: RIFT_CLIP_PATH_MOBILE,
-          background: '#f0ece4',
+          background: 'rgba(240, 236, 228, 0.05)',
+          backdropFilter: 'blur(4px)',
+          WebkitBackdropFilter: 'blur(4px)',
         }}
         aria-hidden="true"
       />
@@ -214,7 +218,7 @@ export default function BandStorySection() {
 
       {/* ══════════════════════════════════════════════════════════════════
           LAYER 3: Brutalist overlapping typography (background text)
-      ══════════════════════════════════════════════════════════════════ */}
+      ═════════════════════════════════════════���════════════════════════ */}
       <div
         className="absolute inset-0 z-[8] flex items-center justify-center pointer-events-none overflow-hidden"
         aria-hidden="true"
@@ -270,6 +274,7 @@ export default function BandStorySection() {
           MANIFIESTO SONORO
         </p>
 
+
         {/* Main heading — overlapping outlined + filled */}
         <div className="relative mb-8 md:mb-12">
           {/* Capa de contorno (Solo visible y ajustada para Desktop) */}
@@ -291,10 +296,10 @@ export default function BandStorySection() {
 
           {/* Capa sólida principal */}
           <h2
-            className="relative text-[#050505] font-black leading-[0.85] tracking-tight text-balance uppercase"
+            className="relative text-[#f0ece4] font-black leading-[0.85] tracking-tight text-balance uppercase"
             style={{
               fontFamily: 'var(--font-oswald), Impact, sans-serif',
-              fontSize: 'clamp(2.2rem, 7vw, 4.8rem)', // Tamaño más contenido en desktop
+              fontSize: 'clamp(2.2rem, 7vw, 4.8rem)',
             }}
           >
             El alma de <br className="md:hidden" />
@@ -304,21 +309,21 @@ export default function BandStorySection() {
 
         {/* Decorative fracture line */}
         <div className="flex items-center gap-4 mb-8" aria-hidden="true">
-          <div className="w-12 md:w-20 h-[2px] bg-[#050505]/20" />
+          <div className="w-12 md:w-20 h-[2px] bg-[#f0ece4]/20" />
           <div
             className="w-3 h-3 rotate-45 border-2 border-[#880808]"
             style={{ background: 'transparent' }}
           />
-          <div className="w-12 md:w-20 h-[2px] bg-[#050505]/20" />
+          <div className="w-12 md:w-20 h-[2px] bg-[#f0ece4]/20" />
         </div>
 
         {/* Manifesto text */}
         <div className="max-w-2xl space-y-5 mb-10">
           <p
-            className="text-[#1a1a1a] text-sm md:text-base leading-relaxed text-balance"
+            className="text-[#d6d0c8] text-sm md:text-base leading-relaxed text-balance"
             style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
           >
-            <span className="font-semibold text-[#050505]">Desde el volcán.</span> Nacidos
+            <span className="font-semibold text-[#f0ece4]">Desde el volcán.</span> Nacidos
             del ruido atómico y la rabia volcánica de las Islas Canarias, Autofilia construyó
             su sonido entre paredes de feedback y amplificadores empujados más allá del límite.
             Noise-rock de trinchera, destilado en cada nota al borde del colapso.
@@ -328,7 +333,7 @@ export default function BandStorySection() {
         {/* Brutalist CTA button */}
         <Link
           href="/about"
-          className="inline-block border-2 border-[#050505] text-[#050505] px-10 py-4 text-[10px] md:text-xs tracking-[0.3em] font-black uppercase transition-all duration-300 hover:bg-[#050505] hover:text-[#f0ece4] active:scale-95"
+          className="inline-block border-2 border-[#f0ece4] text-[#f0ece4] px-10 py-4 text-[10px] md:text-xs tracking-[0.3em] font-black uppercase transition-all duration-300 hover:bg-[#f0ece4] hover:text-[#050505] active:scale-95"
           style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
         >
           Nuestra historia completa
