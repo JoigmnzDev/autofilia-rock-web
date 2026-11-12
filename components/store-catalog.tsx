@@ -1,12 +1,18 @@
 "use client";
 
-import Image from "next/image";
-import { ShoppingBag, Filter, ChevronUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const merchItems = [
-  // ...todos tus 12 items exactamente iguales...
-];
+interface MerchItem {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  tag: string | null;
+  category: "APPAREL" | "MEDIA" | "ACCESSORIES";
+}
+
+const merchItems: MerchItem[] = [];
 
 const categories = ["ALL", "APPAREL", "MEDIA", "ACCESSORIES"];
 
