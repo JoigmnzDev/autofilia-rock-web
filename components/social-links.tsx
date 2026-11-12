@@ -1,56 +1,51 @@
+import { SOCIAL_LINKS, type SocialLinkItem } from "@/config/site";
+import { type IconType } from "react-icons";
 import {
-  SiInstagram,
-  SiTiktok,
-  SiYoutube,
-  SiFacebook,
-  SiSpotify,
-  SiSoundcloud,
-} from "react-icons/si";
-import { cn } from "@/lib/utils";
+  FaInstagram,
+  FaTiktok,
+  FaYoutube,
+  FaFacebook,
+  FaSpotify,
+} from "react-icons/fa6";
+
+const SOCIAL_ICONS: Record<SocialLinkItem["id"], IconType> = {
+  instagram: FaInstagram,
+  tiktok: FaTiktok,
+  youtube: FaYoutube,
+  facebook: FaFacebook,
+  spotify: FaSpotify,
+};
 
 interface SocialLinksProps {
   className?: string;
   iconClassName?: string;
-  size?: number;
 }
 
-const SOCIAL_LINKS = [
-  { icon: SiInstagram, href: "#", label: "Instagram" },
-  { icon: SiTiktok, href: "#", label: "TikTok" },
-  { icon: SiYoutube, href: "#", label: "YouTube" },
-  { icon: SiFacebook, href: "#", label: "Facebook" },
-  { icon: SiSpotify, href: "#", label: "Spotify" },
-  { icon: SiSoundcloud, href: "#", label: "SoundCloud" },
-];
-
 export function SocialLinks({
-  className,
-  iconClassName,
-  size = 20,
+  className = "",
+  iconClassName = "",
 }: SocialLinksProps) {
   return (
-    <nav aria-label="Redes sociales" className={className}>
-      <ul className={cn("flex flex-wrap items-center justify-start gap-5")}>
-        {SOCIAL_LINKS.map((social) => (
-          <li key={social.label}>
-            <a
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group transition-opacity hover:opacity-80"
-              aria-label={social.label}
-            >
-              <social.icon
-                style={{ width: size, height: size }}
-                className={cn(
-                  "fill-current transition-colors duration-300",
-                  iconClassName,
-                )}
-              />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className={`flex items-center gap-5 ${className}`}>
+      {SOCIAL_LINKS.map((social) => {
+        const Icon = SOCIAL_ICONS[social.id];
+
+        return (
+          <a
+            key={social.id}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.name}
+            className="group transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            <Icon
+              size={20}
+              className={`transition-colors duration-200 ${iconClassName}`}
+            />
+          </a>
+        );
+      })}
+    </div>
   );
 }
