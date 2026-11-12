@@ -1,10 +1,10 @@
-import Navbar from '@/components/navbar'
-import HeroSection from '@/components/hero-section'
-import BandStorySection from '@/components/band-story-section'
-import TourSection from '@/components/tour-section'
-import MusicSection from '@/components/music-section'
-import MerchSection from '@/components/merch-section'
-import Footer from '@/components/footer'
+import Navbar from "@/components/navbar";
+import HeroSection from "@/components/hero-section";
+import BandStorySection from "@/components/band-story-section";
+import TourSection from "@/components/tour-section";
+import MusicSection from "@/components/music-section";
+import MerchSection from "@/components/merch-section";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,8 +14,7 @@ export default function Home() {
       <TourSection />
       <MusicSection />
       <BandStorySection />
-      <MerchSection />
       <Footer />
     </main>
-  )
+  );
 }

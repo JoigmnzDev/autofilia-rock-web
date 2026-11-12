@@ -9,8 +9,8 @@ import { useEffect, useState } from "react";
 const NAV_LINKS = [
   { label: "TOUR", href: "/#tour" },
   { label: "MÚSICA", href: "/#music" },
-  { label: "SOBRE NOSOTROS", href: "/#about" },
-  { label: "CONTACTO", href: "/#contact" },
+  { label: "SOBRE NOSOTROS", href: "/about" },
+  { label: "CONTACTO", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -134,7 +134,6 @@ export default function Navbar() {
 
           <div className="mt-auto p-10 border-t border-[#2a2a2a]/50 bg-[#080808]">
             <SocialLinks
-              size={24}
               className="flex justify-center gap-6"
               iconClassName="text-[#888480] hover:text-[#f0ece4] transition-colors"
             />
