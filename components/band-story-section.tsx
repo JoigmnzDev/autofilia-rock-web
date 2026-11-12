@@ -326,10 +326,10 @@ export default function BandStorySection() {
             <span className="font-semibold text-[#f0ece4]">
               Desde el volcán.
             </span>{" "}
-            Nacidos del ruido atómico y la rabia volcánica de las Islas
-            Canarias, Autofilia construyó su sonido entre paredes de feedback y
-            amplificadores empujados más allá del límite. Noise-rock de
-            trinchera, destilado en cada nota al borde del colapso.
+            Desde Lanzarote. Nacidos entre el océano y la escena rock de las
+            Islas Canarias, Autofilia convierte emociones reales en sonidos
+            potentes de rock y punk alternativo. Una banda sonora sobre el amor
+            propio, las luces y las sombras.
           </p>
         </div>
 
