@@ -70,3 +70,31 @@ export const ALBUMS = {
 export const MAIN_ALBUM = ALBUMS.saboreandoSales;
 
 export const ALL_ALBUMS = Object.values(ALBUMS);
+
+export interface SocialLinkItem {
+  id: "instagram" | "tiktok" | "youtube" | "facebook" | "spotify";
+  name: string;
+  url: string;
+}
+
+export const SITE_CONFIG = {
+  name: "AUTOFILIA",
+  url: "https://www.autofiliarock.com",
+  email: "autofiliarock@gmail.com",
+  mailto: "mailto:autofiliarock@gmail.com",
+  social: {
+    instagram: "https://www.instagram.com/autofiliarock/",
+    tiktok: "https://www.tiktok.com/@autofiliarock",
+    youtube: "https://www.youtube.com/@autofiliarock",
+    facebook: "https://www.facebook.com/@autofiliarock",
+    spotify: "https://open.spotify.com/artist/2HGgA0696fk36JLkxX8whK",
+  },
+} as const;
+
+export const SOCIAL_LINKS: SocialLinkItem[] = [
+  { id: "instagram", name: "Instagram", url: SITE_CONFIG.social.instagram },
+  { id: "tiktok", name: "TikTok", url: SITE_CONFIG.social.tiktok },
+  { id: "youtube", name: "YouTube", url: SITE_CONFIG.social.youtube },
+  { id: "facebook", name: "Facebook", url: SITE_CONFIG.social.facebook },
+  { id: "spotify", name: "Spotify", url: SITE_CONFIG.social.spotify },
+];
