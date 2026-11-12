@@ -9,7 +9,6 @@ interface TourDate {
   country: string;
 }
 
-// Deja el array vacío [] para probar el estado "PRÓXIMAMENTE"
 const tourDates: TourDate[] = [
   /*
   {
