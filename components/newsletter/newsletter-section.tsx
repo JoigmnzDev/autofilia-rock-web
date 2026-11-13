@@ -24,7 +24,7 @@ export default function NewsletterSection() {
 
   const onSubmit = (data: NewsletterSchemaType) => {
     mutate(data, {
-      onError: (error: any) => {
+      onError: (error: Error) => {
         form.setError("email", {
           type: "server",
           message: error.message.toUpperCase(),

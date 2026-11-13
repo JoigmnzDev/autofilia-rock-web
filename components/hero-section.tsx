@@ -42,7 +42,7 @@ export default function HeroSection() {
           className="text-[#880808] text-xs tracking-[0.4em] mb-6"
           style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
         >
-          NEW ALBUM — SABOREANDO SALES
+          NUEVO ÁLBUM — SABOREANDO SALES
         </p>
         <h1
           className="text-[clamp(4rem,14vw,13rem)] font-bold leading-none text-[#f0ece4] tracking-tight text-balance"
@@ -51,7 +51,7 @@ export default function HeroSection() {
           AUTOFILIA
         </h1>
         <p className="mt-4 text-[#888480] text-sm md:text-base tracking-widest font-light text-balance">
-          ROCK · BLOOD · FIRE · NOISE
+          ROCK · SANGRE · FUEGO · RUIDO
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
           <a
@@ -60,21 +60,21 @@ export default function HeroSection() {
             style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
           >
             <Play size={14} fill="currentColor" />
-            LISTEN NOW
+            ESCUCHAR AHORA
           </a>
           <a
             href="#tour"
             className="border border-[#2a2a2a] text-[#888480] hover:text-[#f0ece4] hover:border-[#f0ece4] px-8 py-4 text-xs tracking-[0.25em] transition-all duration-300"
             style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
           >
-            TOUR DATES
+            FECHAS DE TOUR
           </a>
         </div>
       </div>
       <a
         href="#tour"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-[#888480] hover:text-[#880808] transition-colors duration-300 animate-bounce"
-        aria-label="Scroll to tour dates"
+        aria-label="Scroll to FECHAS DE TOUR"
       >
         <ChevronDown size={24} />
       </a>

@@ -1,8 +1,6 @@
 import { MAIN_ALBUM, STREAMING_LABELS, StreamingPlatform } from "@/config/site";
 import { Music2, ExternalLink } from "lucide-react";
 
-const ALBUM_ID = "0AbFFTfM96AJWToU49venu";
-
 export default function MusicSection() {
   return (
     <section
@@ -17,7 +15,7 @@ export default function MusicSection() {
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#f0ece4] leading-none"
             style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
           >
-            MUSIC
+            MÚSICA
             <span className="text-[#880808]">.</span>
           </h2>
           {MAIN_ALBUM.streaming.spotify && (
@@ -48,7 +46,7 @@ export default function MusicSection() {
               className="text-[#880808] text-xs tracking-[0.35em]"
               style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
             >
-              NEW ALBUM
+              NUEVO ÁLBUM
             </p>
             <h3
               className="text-3xl md:text-5xl font-bold text-[#f0ece4] uppercase"
@@ -84,7 +82,7 @@ export default function MusicSection() {
                 className="inline-flex items-center gap-2 self-start text-xs tracking-[0.2em] border border-[#880808] text-[#880808] hover:bg-[#880808] hover:text-[#f0ece4] px-5 py-3 transition-all duration-300"
                 style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
               >
-                OPEN IN SPOTIFY
+                ABRIR EN SPOTIFY
                 <ExternalLink size={11} />
               </a>
             )}
