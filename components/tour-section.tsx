@@ -27,7 +27,7 @@ export default function TourSection() {
     <section
       id="tour"
       className="relative py-24 md:py-36 px-6 md:px-10 bg-[#050505]"
-      aria-label="Tour dates"
+      aria-label="FECHAS DE TOUR"
     >
       <div className="max-w-screen-xl mx-auto">
         {/* Section header */}

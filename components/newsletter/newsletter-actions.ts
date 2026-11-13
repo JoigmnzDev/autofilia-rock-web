@@ -28,9 +28,14 @@ export async function subscribeToNewsletter(data: NewsletterSchemaType) {
     });
 
     return { success: true, message: "¡Te has unido al círculo!" };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.log("Error completo de Resend:", error);
-    if (error.name === "contact_already_exists") {
+    if (
+      typeof error === "object" &&
+      error !== null &&
+      "name" in error &&
+      error.name === "contact_already_exists"
+    ) {
       throw new Error("YA ESTÁS DENTRO.");
     }
     throw new Error("ERROR AL UNIRSE AL CÍRCULO.");

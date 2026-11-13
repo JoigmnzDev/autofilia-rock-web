@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "AUTOFILIA — Official Site",
   description:
-    "Official website of Autofilia — the rock band. Tour dates, music, merch and more.",
+    "Official website of Autofilia — the rock band. FECHAS DE TOUR, music, merch and more.",
   generator: "v0.app",
 };
 

@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import type { Metadata } from "next";
 import { Users, Disc3, Calendar, Music } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About — AUTOFILIA",
@@ -84,7 +85,7 @@ export default function AboutPage() {
             className="text-6xl md:text-8xl lg:text-9xl font-bold text-[#f0ece4] leading-none tracking-tight text-balance"
             style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
           >
-            ABOUT
+            SOMOS
             <br />
             <span className="text-[#880808]">AUTOFILIA</span>
           </h1>
@@ -313,11 +314,11 @@ export default function AboutPage() {
           </h2>
           <blockquote className="border-l-2 border-[#880808] pl-6 md:pl-10">
             <p className="text-[#f0ece4] text-xl md:text-2xl leading-relaxed mb-6 italic">
-              "Autofilia deriva del griego: Auto (por sí mismo) y Filia (amor).
-              Creemos en el amor propio desde un lugar equilibrado: poco amor
-              propio es menospreciarte y demasiado amor es egocentrismo. Muchas
-              veces la cura está en el agua salada: llorar, transpirar o nadar
-              en el mar."
+              &ldquo;Autofilia deriva del griego: Auto (por sí mismo) y Filia
+              (amor). Creemos en el amor propio desde un lugar equilibrado: poco
+              amor propio es menospreciarte y demasiado amor es egocentrismo.
+              Muchas veces la cura está en el agua salada: llorar, transpirar o
+              nadar en el mar.&rdquo;
             </p>
             <footer className="text-[#888480] text-sm tracking-widest">
               — AUTOFILIA
@@ -349,13 +350,13 @@ export default function AboutPage() {
               Contrataciones, prensa o colaboraciones con Autofilia.
             </p>
           </div>
-          <a
-            href="/#contact"
+          <Link
+            href="/contact"
             className="inline-flex items-center border border-[#880808] text-[#880808] hover:bg-[#880808] hover:text-[#f0ece4] text-xs tracking-[0.2em] px-6 py-3 transition-all duration-300 whitespace-nowrap"
             style={{ fontFamily: "var(--font-oswald), Impact, sans-serif" }}
           >
             CONTÁCTANOS
-          </a>
+          </Link>
         </div>
       </section>
 

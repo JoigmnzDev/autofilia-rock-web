@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { StoreCatalog } from "@/components/store-catalog";
 
-// Cambia a `true` cuando el merch oficial esté listo
 const IS_STORE_ACTIVE = false;
 
 export default function StorePage() {
