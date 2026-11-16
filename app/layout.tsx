@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Oswald, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import QueryProvider from "@/components/providers/query-provider";
+import QueryProvider from "@/providers/query-provider";
 
 const oswald = Oswald({
   subsets: ["latin"],

@@ -7,8 +7,8 @@ import NewsletterForm from "./newsletter-form";
 import {
   newsletterSchema,
   NewsletterSchemaType,
-} from "@/components/newsletter/newsletter-schema";
-import { useNewsletter } from "./use-newsletter";
+} from "../schemas/newsletter-schema";
+import { useNewsletter } from "../hooks/use-newsletter";
 
 export default function NewsletterSection() {
   const { mutate, isPending, isSuccess } = useNewsletter();

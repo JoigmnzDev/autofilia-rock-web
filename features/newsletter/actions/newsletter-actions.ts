@@ -1,7 +1,10 @@
 "use server";
 
 import { Resend } from "resend";
-import { newsletterSchema, NewsletterSchemaType } from "./newsletter-schema";
+import {
+  newsletterSchema,
+  NewsletterSchemaType,
+} from "../schemas/newsletter-schema";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

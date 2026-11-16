@@ -1,8 +1,8 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { StoreCatalog } from "@/components/store-catalog";
+import { StoreCatalog } from "./_components/store-catalog";
 
 const IS_STORE_ACTIVE = false;
 

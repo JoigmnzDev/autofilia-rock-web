@@ -1,8 +1,8 @@
 "use client";
 
-import NewsletterSection from "@/components/newsletter/newsletter-section";
+import NewsletterSection from "../../features/newsletter/components/newsletter-section";
 import Link from "next/link";
-import { SocialLinks } from "./social-links";
+import { SocialLinks } from "@/components/shared/social-links";
 
 export default function Footer() {
   return (

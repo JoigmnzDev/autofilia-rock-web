@@ -1,5 +1,5 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 import type { Metadata } from "next";
 import { Users, Disc3, Calendar, Music } from "lucide-react";
 import Link from "next/link";

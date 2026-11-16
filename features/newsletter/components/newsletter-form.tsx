@@ -1,10 +1,15 @@
 import { useFormContext } from "react-hook-form";
-import { NewsletterSchemaType } from "./newsletter-schema";
+import { NewsletterSchemaType } from "../schemas/newsletter-schema";
 import { cn } from "@/lib/utils";
-import { FormControl, FormField, FormItem, FormMessage } from "../ui/form";
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { Loader2 } from "lucide-react";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 interface NewsletterFormProps {
   onSubmit: (data: NewsletterSchemaType) => void;

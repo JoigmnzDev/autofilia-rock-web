@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { HiOutlineEquals, HiXMark } from "react-icons/hi2"; // React Icons (Heroicons 2)
 import { cn } from "@/lib/utils";
-import { SocialLinks } from "@/components/social-links";
+import { SocialLinks } from "@/components/shared/social-links";
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
