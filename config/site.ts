@@ -1,4 +1,4 @@
-export type albumType = "ALBUM" | "EP" | "SINGLE";
+type albumType = "ALBUM" | "EP" | "SINGLE";
 
 export type StreamingPlatform = "spotify" | "appleMusic" | "youtube" | "deezer";
 
@@ -9,14 +9,14 @@ export const STREAMING_LABELS: Record<StreamingPlatform, string> = {
   deezer: "DEEZER",
 };
 
-export interface Track {
+interface Track {
   title: string;
   duration: string;
   year: string;
   trackNum: number;
 }
 
-export interface AlbumRelease {
+interface AlbumRelease {
   id: string;
   title: string;
   synopsis: string;
@@ -27,7 +27,7 @@ export interface AlbumRelease {
   streaming: Partial<Record<StreamingPlatform, string>>;
 }
 
-export const ALBUMS = {
+const ALBUMS = {
   saboreandoSales: {
     id: "saboreando-sales",
     title: "Saboreando Sales",
@@ -69,7 +69,7 @@ export const ALBUMS = {
 
 export const MAIN_ALBUM = ALBUMS.saboreandoSales;
 
-export const ALL_ALBUMS = Object.values(ALBUMS);
+const ALL_ALBUMS = Object.values(ALBUMS);
 
 export interface SocialLinkItem {
   id: "instagram" | "tiktok" | "youtube" | "facebook" | "spotify";
