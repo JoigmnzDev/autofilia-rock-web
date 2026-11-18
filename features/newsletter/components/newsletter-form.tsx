@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { NewsletterSchemaType } from "../schemas/newsletter-schema";
+import { SubscribeNewsletterSchemaType } from "../schemas/subscribe-newsletter.schema";
 import { cn } from "@/lib/utils";
 import {
   FormControl,
@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 interface NewsletterFormProps {
-  onSubmit: (data: NewsletterSchemaType) => void;
+  onSubmit: (data: SubscribeNewsletterSchemaType) => void;
   isLoading: boolean;
   className?: string;
 }
@@ -21,7 +21,7 @@ export default function NewsletterForm({
   className,
   isLoading,
 }: NewsletterFormProps) {
-  const form = useFormContext<NewsletterSchemaType>();
+  const form = useFormContext<SubscribeNewsletterSchemaType>();
 
   return (
     <form

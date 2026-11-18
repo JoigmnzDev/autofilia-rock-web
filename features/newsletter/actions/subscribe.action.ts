@@ -2,14 +2,17 @@
 
 import { Resend } from "resend";
 import {
-  newsletterSchema,
-  NewsletterSchemaType,
-} from "../schemas/newsletter-schema";
+  subscribeNewsletterSchema,
+  SubscribeNewsletterSchemaType,
+} from "../schemas/subscribe-newsletter.schema";
+import { env } from "@/lib/env";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(env.RESEND_API_KEY);
 
-export async function subscribeToNewsletter(data: NewsletterSchemaType) {
-  const result = newsletterSchema.safeParse(data);
+export async function subscribeToNewsletter(
+  data: SubscribeNewsletterSchemaType,
+) {
+  const result = subscribeNewsletterSchema.safeParse(data);
 
   if (!result.success) {
     throw new Error(result.error.errors[0].message || "Email no válido");
@@ -19,14 +22,15 @@ export async function subscribeToNewsletter(data: NewsletterSchemaType) {
 
   try {
     await resend.contacts.create({
-      email: email,
+      email,
       unsubscribed: false,
-      segments: [{ id: "312be811-0397-44f3-8756-dc85c8feb3bb" }],
+      segments: [{ id: env.RESEND_SEGMENT_ID! }],
     });
+
     await resend.emails.send({
       to: email,
       template: {
-        id: "6b153199-b161-40c6-a3ea-2afde53b9130",
+        id: env.RESEND_WELCOME_TEMPLATE_ID!,
       },
     });
 

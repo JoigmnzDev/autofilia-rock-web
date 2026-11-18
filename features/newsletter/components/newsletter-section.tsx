@@ -5,16 +5,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form } from "@/components/ui/form";
 import NewsletterForm from "./newsletter-form";
 import {
-  newsletterSchema,
-  NewsletterSchemaType,
-} from "../schemas/newsletter-schema";
-import { useNewsletter } from "../hooks/use-newsletter";
+  subscribeNewsletterSchema,
+  SubscribeNewsletterSchemaType,
+} from "../schemas/subscribe-newsletter.schema";
+import { useSubscribeNewsletter } from "../hooks/use-subscribe-newsletter";
 
 export default function NewsletterSection() {
-  const { mutate, isPending, isSuccess } = useNewsletter();
+  const { mutate, isPending, isSuccess } = useSubscribeNewsletter();
 
-  const form = useForm<NewsletterSchemaType>({
-    resolver: zodResolver(newsletterSchema),
+  const form = useForm<SubscribeNewsletterSchemaType>({
+    resolver: zodResolver(subscribeNewsletterSchema),
     mode: "onSubmit",
     reValidateMode: "onSubmit",
     defaultValues: {
@@ -22,7 +22,7 @@ export default function NewsletterSection() {
     },
   });
 
-  const onSubmit = (data: NewsletterSchemaType) => {
+  const onSubmit = (data: SubscribeNewsletterSchemaType) => {
     mutate(data, {
       onError: (error: Error) => {
         form.setError("email", {
