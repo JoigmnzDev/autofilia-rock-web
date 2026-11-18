@@ -80,6 +80,10 @@ export interface SocialLinkItem {
 export const SITE_CONFIG = {
   name: "AUTOFILIA",
   url: "https://www.autofiliarock.com",
+  description:
+    "Web oficial de Autofilia. Escucha nuestro álbum Saboreando Sales, entérate de las próximas fechas de gira y únete al círculo para recibir lanzamientos exclusivos.",
+  ogImage: "/og-image.jpg",
+  genre: ["Rock", "Rock Alternativo"],
   email: "autofiliarock@gmail.com",
   mailto: "mailto:autofiliarock@gmail.com",
   social: {
